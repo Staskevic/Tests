@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200;300;500&family=M+PLUS+1p&family=Noto+Sans+Display:wght@200;300&family=Poppins:wght@300&display=swap');
+
+
+.prel{
+    position: absolute;
+    opacity: 1;
+}
+
+:root{
+    /* --dark2:#b59760; */
+   
+
+    --dark1:#162229;
+    --dark2:#2C4451;
+    --dark3:#0E151A;
+
+    --black:#0f191f;
+    --white:#ddd4c8;
+
+    --bright1:#bd9266;
+    --bright2:#D7C1A7;
+    --bright3:#7F5E39;
+    --bright4:#cead8a;
+
+    --font1:'KoHo', sans-serif;
+    --font2:'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-family: var(--font2);
+    text-transform: uppercase;
+    color: var(--dark1);
+    
+}
+*::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+  }
+
+ body{
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    height: 100vh;
+  
+}
+
+.path{opacity: 0;}
+
+/* .contain{
+    width: 100%;
+    height: 100%;
+} */
+
+#viewport {
+    overflow: hidden;
+    /* position: sticky; */
+    
+    width: 100%;
+     scroll-snap-type:y; 
+
+     scroll-snap-type:proximity;
+  
+     scroll-snap-points-y: repeat(100vh); 
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+
+    
+    /* background-image: url("/webp2/001.webp");
+    background-repeat:repeat-x;
+    background-attachment:fixed;
+    background-size:40% ;
+     */
+    /* color: #91e600;
+    z-index: 10; */
+  } 
+ 
+.strip1{
+    position: absolute;
+    height: 260vh;
+    top: 0vh;
+    width: 100%;
+    /* background: linear-gradient(to top , var(--dark1), var(--bright3) , var(--dark1));  */
+    z-index: -1;
+    
+}
+.strip{
+    position: absolute;
+    height: 300vh;
+    top: 0vh;
+    width: 100%;
+    background: linear-gradient(to top , var(--dark1), var(--bright3) , var(--dark1)); 
+    z-index: -1;
+    
+}
+
+  .wrapper{
+    width: 100%;
+    position: relative;
+    display: flexbox;
+    overflow: hidden;
+    height:370vh;
+    scroll-snap-type:y; 
+
+    scroll-snap-type:proximity;
+
+    scroll-snap-points-y: repeat(100vh); 
+  
+ 
+}
+
+h1{
+    color: var(--dark1);
+    
+}
+
+.svg{
+    position:absolute;
+    height: 60vh ;
+    top:0vh;
+    left: 50%;
+    transform: translateX(-50%) ;
+   
+opacity: .6;
+mix-blend-mode:luminosity;
+    /* width: 50%;
+    height: 50%; */
+}
+
+.h1{
+    position: absolute;
+    font-size: 3vw;
+    top: 110vh;
+    color: #bd9266;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 60vh;
+    align-items: center;
+    text-align: center;
+    /* background-color: #bd9266; */
+    scroll-snap-align: center;
+
+}
+
+
+.faceb{
+width: 8vh;
+height: 8vh;
+border: 2px;
+/* background-color: #cead8a; */
+position: absolute;
+left: calc(20% - 40px);
+opacity: .3;
+display: inline-block;
+/* background-image: url( '/facebook-svgrepo-com.svg' ); */
+
+}
+
+
+.insta{
+    width: 8vh;
+    height: 8vh;
+    border:  red 5px;
+    /* background-color: #cead8a; */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    opacity: .3;
+/* mix-blend-mode:luminosity; */
+
+
+    /* background-image: url( '/facebook-svgrepo-com.svg' ) */
+    }
+
+    .twit{
+        width: 8vh;
+        height: 8vh;
+        border: 2px;
+    
+        position: absolute;
+        right: calc(20% - 140px);
+        opacity: .2;
+        /* background-image: url( '/facebook-svgrepo-com.svg' ) */
+        }
+
+
+
+.contact{
+    position: absolute;
+    font-size: 2vw;
+    top: 305vh;
+    color: #bd9266;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 10vh;
+    align-items: center;
+    text-align: center;
+
+    scroll-snap-align: center;
+}        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 580px) {
+
+
+    .faceb{
+        top:0%;
+        left: calc(50% - 8vh - 17px);
+        transform: translate(-50%, 0px);
+
+    }
+    .insta{
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, 100px);
+
+    }
+    .twit{
+        top: calc(-30% + 4vh);
+        
+        right: calc(20% - 90px);
+        transform: translate(0%, -50%);
+    }
+
+
+
+}
