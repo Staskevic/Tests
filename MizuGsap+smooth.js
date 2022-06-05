@@ -283,7 +283,7 @@ gsap.to(" .insta", {
 //    // this is the helper function that sets it all up. Pass in the content <div> and then the wrapping viewport <div> (can be the elements or selector text). It also sets the default "scroller" to the content so you don't have to do that on all your ScrollTriggers.
 function smoothScroll(content, viewport, smoothness) {
   content = gsap.utils.toArray(content)[0];
-  smoothness = smoothness || 0.55;
+  smoothness = smoothness || 0.5;
 
   gsap.set(viewport || content.parentNode, {overflow: "hidden", position: "fixed", height: "100vh", width: "100%", top: 0, left: 0, right: 0, bottom: 0});
   gsap.set(content, {overflow: "visible", width: "100%"});
