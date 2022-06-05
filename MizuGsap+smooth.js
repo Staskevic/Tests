@@ -283,7 +283,7 @@ gsap.to(" .insta", {
 //    // this is the helper function that sets it all up. Pass in the content <div> and then the wrapping viewport <div> (can be the elements or selector text). It also sets the default "scroller" to the content so you don't have to do that on all your ScrollTriggers.
 function smoothScroll(content, viewport, smoothness) {
   content = gsap.utils.toArray(content)[0];
-  smoothness = smoothness || 0.5;
+  smoothness = smoothness || 0.4;
 
   gsap.set(viewport || content.parentNode, {overflow: "hidden", position: "fixed", height: "100vh", width: "100%", top: 0, left: 0, right: 0, bottom: 0});
   gsap.set(content, {overflow: "visible", width: "100%"});
@@ -324,7 +324,7 @@ function smoothScroll(content, viewport, smoothness) {
       return -getProp("y");
     },
     getBoundingClientRect() {
-      return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+      return {top: 0, left: 0, width: window.innerWidth, height: window.outerHeight};
     }
   });
 
@@ -345,10 +345,6 @@ function smoothScroll(content, viewport, smoothness) {
         isProxyScrolling = false;
       }
     },
-
-    
-    // onRefresh: killScrub // when the screen resizes, we just want the animation to immediately go to the appropriate spot rather than animating there, so basically kill the scrub.
-  
+    onRefresh: killScrub // when the screen resizes, we just want the animation to immediately go to the appropriate spot rather than animating there, so basically kill the scrub.
   });
 }
-
